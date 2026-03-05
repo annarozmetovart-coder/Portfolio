@@ -1,0 +1,85 @@
+/* ===== HEADER ===== */
+
+header {
+  background-color: #333;
+  padding: 20px 0;
+}
+
+/* Nav container */
+header nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Desktop header links */
+header nav a {
+  color: white;
+  text-decoration: underline;
+  margin: 0 40px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 2px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* ===== FOOTER ===== */
+
+.site-footer {
+  background-color: #2f2f2f;
+  color: #e6e6e6;
+  padding: 25px 0;
+  margin-top: 40px;
+}
+
+.footer-container {
+  width: 85%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left p {
+  font-family: "Spectral", serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.footer-right a {
+  font-family: "Spectral", serif;
+  color: #e6e6e6;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  position: relative;
+}
+
+.footer-right a:hover {
+  opacity: 0.7;
+}
+
+/* ===== MOBILE VERSION ===== */
+
+@media (max-width: 600px) {
+  header {
+    padding: 12px 0;
+  }
+
+  header nav {
+    max-width: 100%;
+    padding: 0 8px;           
+    justify-content: center;  
+    flex-wrap: nowrap;        
+  }
+
+  header nav a {
+    margin: 0 8px;            
+    font-size: 12px;          
+    letter-spacing: 1.5px;
+  }
+}

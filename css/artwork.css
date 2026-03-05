@@ -1,0 +1,123 @@
+/* ===== ARTWORK DETAIL PAGE (DRAWING 1,2,3...) ===== */
+
+body.artwork-page {
+  background-color: #19160f;
+  color: #f5f5f5;
+  margin: 0;
+  font-family: "Spectral", serif;
+}
+
+/* same width as other pages */
+body.artwork-page .main {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 0 80px;
+}
+
+/* PAGE LAYOUT:  ← arrow | [image + info] | arrow →  */
+.artwork-shell {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 40px;
+  column-gap: 20px;
+  align-items: center;
+}
+
+/* INNER LAYOUT:  image | text  */
+.artwork-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  column-gap: 40px;
+  align-items: flex-start;
+}
+
+/* IMAGE */
+.artwork-image img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  display: block;
+  border-radius: 2px;
+}
+
+/* INFO TEXT */
+.artwork-info h1 {
+  font-size: 26px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.artwork-meta {
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.artwork-meta span {
+  display: block;
+}
+
+.artwork-description {
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 420px;
+}
+
+/* ARROWS */
+.art-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.art-arrow svg {
+  width: 28px;
+  height: 28px;
+  stroke: #f5f5f5;
+}
+
+/* HOVER */
+.art-arrow:hover svg {
+  transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+
+  body.artwork-page .main {
+    width: 90%;
+    padding: 40px 0 60px;
+  }
+
+  .artwork-shell {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  /* arrows above and below the content on small screens */
+  .art-arrow-left {
+    justify-content: flex-start;
+  }
+  .art-arrow-right {
+    justify-content: flex-end;
+  }
+
+  .artwork-main {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .artwork-info h1 {
+    font-size: 20px;
+    letter-spacing: 0.15em;
+  }
+
+  .artwork-meta,
+  .artwork-description {
+    font-size: 13px;
+  }
+}

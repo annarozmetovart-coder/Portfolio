@@ -1,0 +1,68 @@
+/* ===== ARTIST STATEMENT PAGE ===== */
+
+body.statement-page {
+  background-color: #19160f;
+  color: #f5f5f5;
+}
+
+/* MAIN WRAPPER */
+.main {
+  width: 80%;
+  max-width: 900px;   
+  margin: 0 auto;
+  padding: 60px 0 80px;
+}
+
+
+/* TOP SECTION */
+.statement-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.statement-text-block p {
+  font-family: "Spectral", serif;
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* IMAGE */
+.statement-image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* BOTTOM TEXT */
+.statement-body {
+  margin-top: 40px;
+}
+
+.statement-body p {
+  font-family: "Spectral", serif;
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .statement-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .statement-text-block p,
+  .statement-body p {
+    font-size: 16px;
+    letter-spacing: 0.18em;
+  }
+}
